@@ -18,6 +18,26 @@
     </style>
 </head>
 <body>
-    <iframe src="https://docs.google.com/viewer?url=https://andreipredescuweb.github.io/AndreiPredescuPortfolioEN.pdf&embedded=true"></iframe>
+    <iframe id="pdf-iframe" src="https://docs.google.com/viewer?url=https://andreipredescuweb.github.io/AndreiPredescuPortfolioEN.pdf&embedded=true"></iframe>
+    
+    <script>
+        var pdfIframe = document.getElementById("pdf-iframe");
+        var pdfUrl = "https://andreipredescuweb.github.io/AndreiPredescuPortfolioEN.pdf";
+
+        // Try to open the PDF with the system-preferred viewer
+        var openSystemViewer = function () {
+            window.location.href = pdfUrl;
+        };
+
+        // If the system viewer fails, fall back to the embedded viewer
+        pdfIframe.onload = function () {
+            if (!pdfIframe.contentDocument || !pdfIframe.contentDocument.readyState === "complete") {
+                openSystemViewer();
+            }
+        };
+
+        // Handle the case where the iframe fails to load
+        pdfIframe.onerror = openSystemViewer;
+    </script>
 </body>
 </html>
