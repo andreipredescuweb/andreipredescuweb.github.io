@@ -10,22 +10,29 @@
             font-family: Arial, sans-serif; /* Use Arial font for text */
             margin: 0;
             padding: 0;
-            text-align: left; /* Align all text to the left */
+            text-align: center; /* Center-align text */
         }
 
         /* Style the content */
+        #bio-container {
+            margin: 0 auto; /* Center the container horizontally */
+            width: 600px; /* Set width of the container */
+            padding: 20px; /* Add padding to create equal margins */
+            background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+        }
+
+        /* Style the text */
         #bio-content {
-            margin: 20px; /* Add margin to the content */
             font-size: 12px; /* Set font size to 12 */
             line-height: 1.5; /* Set line height for better readability */
         }
     </style>
 </head>
 <body>
-    <section id="bio-content">
-        <p>Andrei Predescu (b.1998) – is a visual artist based in Bucharest.</p>
-        <p>His practice is centered around the conceptual landscape associated with post-internet culture and consists of object and video-based installations.</p>
-        <p>These installations act as critical vectors of digital content.</p>
-    </section>
+    <div id="bio-container">
+        <section id="bio-content">
+            <p>Andrei Predescu (b.1998) – is a visual artist based in Bucharest. His practice is centered around the conceptual landscape associated with post-internet culture and consists of object and video-based installations. These installations act as critical vectors of digital content.</p>
+        </section>
+    </div>
 </body>
 </html>
